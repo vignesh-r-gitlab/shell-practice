@@ -7,3 +7,5 @@ endtime=$(data +%s)
 endtime "script end time:$endtime"
 
 totaltime=$($endtime-$starttime)
+
+echo "time took to execute the script:$totaltime"
