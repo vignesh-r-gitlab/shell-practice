@@ -1,5 +1,9 @@
 #!/bin/bash
 
-variable=$(time)
+starttime=$(date +%s)
+echo "script start time: $starttime"
 
-echo "script executed at: $variable"
+endtime=$(data +%s)
+endtime "script end time:$endtime"
+
+totaltime=$($endtime-$starttime)
