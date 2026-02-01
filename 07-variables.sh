@@ -3,7 +3,7 @@
 $@
 $#
 $0
-$password
+$PWD
 $user
 $HOME
 $$
