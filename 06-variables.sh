@@ -1,3 +1,3 @@
 #!/bin/bash
 
-varaible=(time)
+varaible=$(time)
