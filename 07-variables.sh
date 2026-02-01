@@ -1,12 +1,12 @@
 #!/bin/bash
 
-$@
-$#
-$0
-$PWD
-$user
-$HOME
-$$
-$!
-$*
-$?
+echo "$@"
+echo "$#"
+echo "$0"
+echo "$PWD"
+echo "$user"
+echo "$HOME"
+echo "$$"
+echo "$!"
+echo "$*"
+echo "$?"
