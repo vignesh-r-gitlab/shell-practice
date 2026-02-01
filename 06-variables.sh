@@ -1,5 +1,5 @@
 #!/bin/bash
 
-varaible=$(time)
+variable=$(time)
 
 echo "script executed at $variable"
