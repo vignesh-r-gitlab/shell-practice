@@ -2,4 +2,4 @@
 
 variable=$(time)
 
-echo "script executed at $variable"
+echo "script executed at: $variable"
