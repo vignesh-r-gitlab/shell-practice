@@ -15,9 +15,9 @@ mkdir -p $LOG_DIR
 VALIDATE(){
 
 if [ $1 -ne 0 ]; then 
-    echo "$2".....failure
+    echo "$2".....failure   &>> $LOG_FILE
 else
-    echo "$2".....success
+    echo "$2".....success   &>> $LOG_FILE
 fi
 }
 
