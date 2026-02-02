@@ -12,7 +12,7 @@ fi
 
 if [ $? -ne 0 ]; then
     echo "installation......failure"
-
+    exit 1
 else
 
     echo "installation......success"
