@@ -17,3 +17,12 @@ else
 
     echo "installation......success"
 fi
+
+    dnf install mysql -y
+
+if [ $? -ne 0 ]; then
+    echo "installation.....failure"
+    exit 1
+else
+    echo "installation.....success"
+fi
