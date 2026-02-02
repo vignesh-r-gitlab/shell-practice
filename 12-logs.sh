@@ -23,3 +23,11 @@ fi
 
 dnf install nginx -y
 VALIDATE $? "nginx installation is" 
+
+dnf install mysql -y 
+VALIDATE $? "mysql installation is"
+
+dnf install nodejs -y
+VALIDATE $? "nodejs installation is"
+
+
