@@ -1,8 +1,8 @@
 #!/bin/bash
 
 USERID=$(id -u)
-LOG-DIR="/var/log/shell-script"
-LOG-FILE="/var/log/shell-script/$0.log"
+LOG_DIR="/var/log/shell-script"
+LOG_FILE="/var/log/shell-script/$0.log"
 
 
 if [ $USERID -ne 0 ]; then
@@ -10,7 +10,7 @@ if [ $USERID -ne 0 ]; then
     exit 1
 fi
 
-mkdir -p $LOG-DIR
+mkdir -p $LOG_DIR
 
 VALIDATE(){
 
