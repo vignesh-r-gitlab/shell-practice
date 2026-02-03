@@ -15,19 +15,19 @@ mkdir -p $LOG_DIR
 VALIDATE(){
 
 if [ $1 -ne 0 ]; then 
-    echo "$2".....failure   | tee -a $LOG_FILE
+    echo "$2".....failure   &>> $LOG_FILE
 else
-    echo "$2".....success   | tee -a $LOG_FILE
+    echo "$2".....success   &>> $LOG_FILE
 fi
 }
 
-dnf install nginx -y
+dnf install nginx -y    &>> $LOG_DIR
 VALIDATE $? "nginx installation is" 
 
-dnf install mysql -y 
+dnf install mysql -y    &>> $LOG_DIR
 VALIDATE $? "mysql installation is"
 
-dnf install nodejs -y
+dnf install nodejs -y   &>> $LOG_DIR
 VALIDATE $? "nodejs installation is"
 
 
