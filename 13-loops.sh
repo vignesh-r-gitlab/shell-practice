@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in {0,1,2,3,....10}
+for i in {0....100}
 do
     echo "$i"
 done
