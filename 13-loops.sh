@@ -9,20 +9,20 @@ if [ $USERID -ne 0 ]; then
     exit 1
 fi
 
-mkdir -p $LOG_DIR
+#mkdir -p $LOG_DIR
 
 VALIDATE(){
     if [ $1 -ne 0 ]; then
-    echo "$2......failure"  &>> $LOG_FILE
+    echo "$2......failure"  #&>> $LOG_FILE
     exit 1
 else
-    echo "$2.....success"   &>> $LOG_FILE
+    echo "$2.....success"   #&>> $LOG_FILE
 fi
 }
 
 
 for package in $@
 do 
-    dnf install $package -y &>> $LOG_FILE
+    dnf install $package -y &>> #$LOG_FILE
     VALIDATE $? "$package installation is"
 done
