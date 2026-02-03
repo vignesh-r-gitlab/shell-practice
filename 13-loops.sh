@@ -20,11 +20,9 @@ else
 fi
 }
 
-dnf install nginx -y    &>> $LOG_FILE
-VALIDATE $? "nginx installation is"
 
-dnf install mysql -y    &>> $LOG_FILE
-VALIDATE $? "mysql installation is"
-
-dnf install nodejs -y   &>> $LOG_FILE
-VALIDATE $? "nodejs installation is"
+for package in $@
+do 
+    dnf install $package -y 
+    VALIDATE $? "$package installation is"
+done
