@@ -21,13 +21,13 @@ else
 fi
 }
 
-dnf install nginx -y    &>> $LOG_DIR
+dnf install nginx -y    &>> $LOG_FILE
 VALIDATE $? "nginx installation is" 
 
-dnf install mysql -y    &>> $LOG_DIR
+dnf install mysql -y    &>> $LOG_FILE
 VALIDATE $? "mysql installation is"
 
-dnf install nodejs -y   &>> $LOG_DIR
+dnf install nodejs -y   &>> $LOG_FILE
 VALIDATE $? "nodejs installation is"
 
 
