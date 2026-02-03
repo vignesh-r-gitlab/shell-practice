@@ -23,6 +23,10 @@ fi
 
 for package in $@
 do 
-    dnf install $package -y | tee -a $LOG_FILE
+    dnf list installed $package     | tee -a $LOG_FILE
+    if [ $? -ne 0 ]; then
+    dnf install $package -y         | tee -a $LOG_FILE
     VALIDATE $? "$package installation is"
+else
+    echo "package already installed"
 done
