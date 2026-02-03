@@ -2,7 +2,7 @@
 
 set -e #ERR
 
-trap 'echo "there is error in line number:$LINENO & in command $BASH_COMMAND"' ERR
+trap 'echo "there is a error in line no:$LINENO and in command:$BASH_COMMAND"' ERR
 
 USERID=$(id -u)
 LOG_DIR="/var/log/shell-practice"
