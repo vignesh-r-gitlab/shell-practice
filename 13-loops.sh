@@ -23,6 +23,6 @@ fi
 
 for package in $@
 do 
-    dnf install $package -y 
+    dnf install $package -y &>> $LOG_FILE
     VALIDATE $? "$package installation is"
 done
